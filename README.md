@@ -288,14 +288,14 @@ Metrics datadog reporter is available as an artifact on
 
 * Group: org.coursera
 * Artifact: metrics-datadog
-* Version: 1.1.14-RC1
+* Version: 1.1.14
 
 Dropwizard datadog reporter is available as an artifact on
 [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.coursera%22%20AND%20a%3A%22dropwizard-metrics-datadog%22)
 
 * Group: org.coursera
 * Artifact: dropwizard-metrics-datadog
-* Version: 1.1.14-RC1
+* Version: 1.1.14
 
 ## Contributing
 
