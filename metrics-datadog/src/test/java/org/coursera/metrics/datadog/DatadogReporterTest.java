@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -354,7 +355,7 @@ public class DatadogReporterTest {
     dynamicTags.add("status:active");
     dynamicTags.add("speed:29");
 
-    when(callback.getTags()).thenReturn(dynamicTags);
+    when(callback.generateTagsFromMetricName(anyString(), anyString())).thenReturn(dynamicTags);
 
     final Counter counter = mock(Counter.class);
     when(counter.getCount()).thenReturn(100L);
