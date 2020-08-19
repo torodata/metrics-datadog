@@ -9,9 +9,12 @@ import java.util.List;
  */
 public interface DynamicTagsCallback {
   /**
-   *
-   * @return dynamic tags that will merge into the static tags. Dynamic tags will overwrite
-   * static tags with the same key
+   * Allow generating tags from the metric name dynamically.
+   * @param metricName is the metric name to generate dynamic tags from (if desired)
+   * @param expansion this is a string that gets appended (joined with a period) to form the full
+   *                  metric name.
+   * @return dynamic tags that will merge into the static tags
    */
-  public List<String> getTags();
+  public List<String> generateTagsFromMetricName(
+      String metricName, String expansion);
 }
